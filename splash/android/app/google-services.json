@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "49398205380",
+    "project_id": "splash-d79e2",
+    "storage_bucket": "splash-d79e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49398205380:android:2541b8a97476fdc3c9b291",
+        "android_client_info": {
+          "package_name": "com.example.splash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKmmWn8vdkCgFLuMrw0a7F3gmAaB2LqOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
