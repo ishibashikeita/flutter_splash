@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bordered_text/bordered_text.dart';
+import 'package:splash/firebase.dart';
 import 'package:splash/template.dart';
 import 'select.dart';
 import 'package:audioplayers/audioplayers.dart';
@@ -40,6 +41,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future(
+      () async {
+        await FirestoreService().onSignInWithAnonymousUser();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final audioPlayer = AudioPlayer();

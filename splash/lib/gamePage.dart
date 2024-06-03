@@ -271,14 +271,14 @@ class _gamepageState extends State<gamepage> {
                   ),
                 ),
               ),
-              // Align(
-              //   alignment: Alignment(0, 0),
-              //   child: ElevatedButton(
-              //       onPressed: () {
-              //         shake();
-              //       },
-              //       child: Text('+')),
-              // ),
+              Align(
+                alignment: Alignment(0, 0),
+                child: ElevatedButton(
+                    onPressed: () {
+                      shake();
+                    },
+                    child: Text('+')),
+              ),
               (fin == false && item == 1)
                   ? Align(
                       alignment: Alignment(-0.7, -0.6),
