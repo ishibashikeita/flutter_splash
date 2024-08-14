@@ -12,8 +12,14 @@ class FirestoreService {
   Future<void> onSignInWithAnonymousUser() async {
     try {
       await firebaseAuth.signInAnonymously();
-    } catch (e) {
-      Fluttertoast.showToast(msg: '通信環境のいい場所で再起動してください');
+    } catch (e) {}
+  }
+
+  Future isLogin() async {
+    if (firebaseAuth.currentUser != null) {
+      return true;
+    } else {
+      return false;
     }
   }
 

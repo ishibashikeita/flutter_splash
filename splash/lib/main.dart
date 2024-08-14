@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:bordered_text/bordered_text.dart';
+import 'package:splash/error_dialog.dart';
 import 'package:splash/firebase.dart';
 import 'package:splash/template.dart';
 import 'select.dart';
@@ -56,6 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final audioPlayer = AudioPlayer();
     final Size size = MediaQuery.of(context).size;
+    Future(
+      () async {
+        bool isLogin = await FirestoreService().isLogin();
+        if (!isLogin) {
+          ErrorDialog().showErrorDialog(context);
+        }
+      },
+    );
     return Scaffold(
         body: Center(
       child: Stack(
